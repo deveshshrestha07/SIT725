@@ -1,6 +1,5 @@
-// public/models/models.js (unchanged but included for completeness)
 const { ObjectId } = require('mongodb');
-const { getDb } = require('../../dbconnection');
+const { getDb } = require('../dbconnection');
 
 class ContentModel {
     static async create(content) {
