@@ -1,41 +1,41 @@
-const { getDb } = require('../dbconnection');
-const { ObjectId } = require('mongodb');
+const ContentModel = require('../models/models');
 
-class ContentModel {
-    static async create(content) {
+class ContentController {
+    static async addContent(req, res) {
         try {
-            const db = getDb();
-            return await db.collection('content').insertOne({
-                ...content,
-                createdAt: new Date()
-            });
+            const { heading, description, picture } = req.body;
+            const content = { heading, description, picture };
+            await ContentModel.create(content);
+            res.status(201).json({ message: 'Content added successfully!' });
         } catch (error) {
-            console.error('Model Error - create:', error);
-            throw error;
+            console.error('Error in addContent:', error);
+            res.status(500).json({ message: 'Error adding content', error: error.message });
         }
     }
 
-    static async getAll() {
+    static async getAllContent(req, res) {
         try {
-            const db = getDb();
-            return await db.collection('content').find({}).toArray();
+            const content = await ContentModel.getAll();
+            res.json(content);
         } catch (error) {
-            console.error('Model Error - getAll:', error);
-            throw error;
+            console.error('Error in getAllContent:', error);
+            res.status(500).json({ message: 'Error fetching content', error: error.message });
         }
     }
 
-    static async delete(id) {
+    static async deleteContent(req, res) {
         try {
-            const db = getDb();
-            return await db.collection('content').deleteOne({
-                _id: new ObjectId(id)
-            });
+            const result = await ContentModel.delete(req.params.id);
+            if (result.deletedCount === 1) {
+                res.status(200).json({ message: 'Content deleted successfully!' });
+            } else {
+                res.status(404).json({ message: 'Content not found!' });
+            }
         } catch (error) {
-            console.error('Model Error - delete:', error);
-            throw error;
+            console.error('Error in deleteContent:', error);
+            res.status(500).json({ message: 'Error deleting content', error: error.message });
         }
     }
 }
 
-module.exports = ContentModel;
+module.exports = ContentController;
