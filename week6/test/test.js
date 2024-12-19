@@ -46,7 +46,7 @@ describe('test POST content api', function() {
             json: {}
         }, function(error, response, body) {
             try {
-                expect(response.statusCode).to.equal(400);  // Changed to match server response
+                expect(response.statusCode).to.equal(400);  
                 expect(body).to.have.property('error');
                 expect(body.error).to.equal('All fields are required (heading, description, picture)');
                 done();
