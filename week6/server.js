@@ -2,13 +2,20 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { connectToDatabase } = require('./dbconnection');
-const contentRouter = require('./public/router/router');
+const router = require('./router/router');
 
 const app = express();
 
+
+// Middleware
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, 'public')));
-app.use('/', contentRouter);
+app.use(express.static(path.join(__dirname)));  // Serve static files
+app.use('/api', router);  // Mount API routes under /api
+
+// Serve index.html for root route
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
 
 async function startServer() {
     try {
@@ -21,5 +28,3 @@ async function startServer() {
 }
 
 startServer();
-
-module.exports = app;
