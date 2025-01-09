@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <!-- Navbar Starts-->
+  <nav class="black">
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">SIT725</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="database.html">Database</a></li>
+        <li><a href="badges.html">Assignment</a></li>
+        <li><a href="collapsible.html">Workshop</a></li>
+        <li> <a class='dropdown-trigger btn white black-text' href='#' data-target='dropdown1'>Drop Me!</a>
+
+          <!-- Dropdown Structure -->
+          <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a></li>
+            <li><a href="#!">two</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="#!">three</a></li>
+            <li><a href="#!"><i class="material-icons">view_module</i>four</a></li>
+            <li><a href="#!"><i class="material-icons">cloud</i>five</a></li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  <!-- Navbar ends -->
+
+  <!-- Carousel -->
+  <div class="carousel black">
+    <a class="carousel-item" href="#one!"><img src="images/test-2.jpg"></a>
+    <a class="carousel-item" href="#two!"><img src="images/test-3.jpg"></a>
+    <a class="carousel-item" href="#three!"><img src="images/test-4.jpg"></a>
+    <a class="carousel-item" href="#four!"><img src="images/test-5.jpeg"></a>
+    <a class="carousel-item" href="#five!"><img src="images/test-6.jpeg"></a>
+  </div>
+  <!-- Carousel Ends -->
+
+  <!-- Parallax -->
+
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/Parallax-1.jpeg"></div>
+  </div>
+  <div class="section white">
+    <div class="row container">
+      <h2 class="header">Mount Everest</h2>
+      <p class="grey-text text-darken-3 lighten-3">Mount Everest, known locally as Sagarmatha or Qomolangma, is Earth's
+        highest mountain above sea level, located in the Mahalangur Himal sub-range of the Himalayas. The China–Nepal
+        border runs across its summit point.</p>
+    </div>
+  </div>
+  <div class="parallax-container">
+    <div class="parallax"><img src="images/Parallax-2.jpeg"></div>
+  </div>
+  <!-- Parallax ends -->
+
+  <!-- Cards -->
+  <div class="row">
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/test-2.jpg">
+          <span class="card-title">Mt Everest</span>
+          <a class="btn-floating halfway-fab waves-effect waves-light red modal-trigger" href="#modal1"> <i
+              class="material-icons">add</i></a>
+        </div>
+        <div class="card-content">
+          <p>This is the Modal button</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/mt-anna.jpeg">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4">Mt Annapurna<i
+              class="material-icons right">more_vert</i></span>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Mt Annapurna<i class="material-icons right">close</i></span>
+          <p>Annapurna is a mountain situated in the Annapurna mountain range of Gandaki Province, north-central Nepal.
+            It is the 10th highest mountain in the world at 8,091 metres above sea level and is well known for the
+            difficulty and danger involved in its ascent.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12 m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="images/mt-macha.jpg">
+          <span class="card-title">Mt Machhapuchhare</span>
+          <a onclick="M.toast({html: 'Mt Machhapuchhare'})"
+            class="btn-floating halfway-fab waves-effect waves-light green btn"><i class="material-icons">check</i></a>
+        </div>
+        <div class="card-content">
+          <p>This is the toast Button</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Cards Ends -->
+
+  <!-- Fiexed Action Button -->
+  <div class="fixed-action-btn">
+    <a class="btn-floating btn-large red">
+      <i class="large material-icons">call</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">message</i></a></li>
+      <li><a class="btn-floating blue darken-1"><i class="material-icons">facebook</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">email</i></a></li>
+    </ul>
+  </div>
+  <!-- Fixed action button end -->
+
+<!-- Collapsible starts -->
+  <ul class="collapsible">
+    <li>
+      <div class="collapsible-header"><i class="material-icons">filter_drama</i>Demonstration of Color Changing button</div>
+      <div class="collapsible-body"><span>
+        <a class="waves-effect waves-light btn colorButton">Button Red</a>
+        <a class="waves-effect waves-light btn colorButton1">Button Pink</a>
+      </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">whatshot</i>Demonstration of Buttons</div>
+      <div class="collapsible-body"><span>
+        <a class="waves-effect waves-light btn">button</a>
+        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+        <a class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>button</a>
+        <a class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        <a class="waves-effect waves-teal btn-flat">Button</a>
+        <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+          <i class="material-icons right">send</i>
+        </button>
+        <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>button</a>
+      </span></div>
+    </li>
+    <li>
+      <div class="collapsible-header"><i class="material-icons">add</i>Demonstration of Grids</div>
+      <div class="collapsible-body"><span>
+        <div class="row">
+
+          <div class="col s3 grey">
+            <p>Grid 1</p>     
+          </div>
+          <div class="col s9 teal">
+            <p>Grid 2</p>
+          </div>
+      </span></div>
+    </li>
+  
+  </ul>
+  <!-- Collapsible ends -->
+
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <h4>Mt Annapurna</h4>
+        <p>Mount Everest, known locally as Sagarmatha or Qomolangma, is Earth's highest mountain above sea level,
+          located in the Mahalangur Himal sub-range of the Himalayas. The China–Nepal border runs across its summit
+          point.</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+      </div>
+    </div>
+
+    <!-- Adding A Databse -->
+    <div class="container">
+      <h1>Adding A Database</h1>
+      <form id="contentForm">
+        <label for="heading">Heading:</label>
+        <input type="text" id="heading" name="heading" placeholder="Enter heading" required>
+  
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" placeholder="Enter description" required></textarea>
+  
+        <label for="picture">Picture URL:</label>
+        <input type="url" id="picture" name="picture" placeholder="Enter picture URL" required>
+  
+        <button type="submit">Add Content</button>
+      </form>
+  
+      <h2>Result</h2>
+      <div id="contentArea"></div>
+    </div>
+
+    <div class="container">
+      <h2>Chat Room</h2>
+      <div id="chatWindow" style="height: 300px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+          <!-- Messages will appear here -->
+      </div>
+      <div id="typingStatus" style="color: gray; font-size: 0.9em;"></div>
+      <input id="messageInput" type="text" placeholder="Type your message..." class="browser-default" style="width: 80%;">
+      <button id="sendButton" class="btn waves-effect waves-light">Send</button>
+  </div>
+  
+
+
+  <!--JavaScript at end of body for optimized loading-->
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/extra.js"></script>
+  <!-- <script type="text/javascript" src="js/colorchange.js"></script> -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/chat.js"></script>
+
+</body>
+<footer class="page-footer black">
+  <div class="footer-copyright">
+    <div class="footer-container">
+      © 2024 Copyright @Devesh
+    </div>
+  </div>
+</footer>
+
+</html>
